@@ -12,17 +12,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Harry Potter Trivia</h1>
-            <button id="start-button" class="btn btn-success">Start</button>
-            <span id="timer">5:00</span>
-        </header>
-        <section>
+    <div id="masthead">
+        
+                <div class="container">
+                <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <h1>Harry Potter Trivia</h1>
+                    </div>
+                    <div class="col-md-4">
+                    <button id="start-button" class="btn btn-default">Start</button>
+                    <span id="timer">5:00</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+<div class="container main-content">
+        <div class="row">
             <h2>Welcome to Harry Potter Trivia!</h2>
             <h3>You have five minutes to answer ten questions. Answer them all before your time runs out!</h3>
-        </section>
-        <section id="trivia" class="hidden">
+        </div>
+        <div id="trivia" class="hidden row">
 
             <ol>
                 <li>How many bedrooms are in the Dursley's house?
@@ -266,10 +276,14 @@
                 </li>
             </ol>
             <button id="submit-button" class="btn btn-danger">Submit</button>
-        </section>
-        <footer>
+            </div>
 
-        </footer>
+            <div class="row">
+                    <footer>
+
+                        </footer>   
+ </div>
+
     </div>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
