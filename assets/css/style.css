@@ -1,3 +1,7 @@
+ #masthead {
+     display: inline;
+ }
+ 
  ol {
     margin-left: 10px;
     padding: 5px;
@@ -11,4 +15,3 @@
     height: 1px; width: 1px; 
     margin: -1px; padding: 0; border: 0; 
 }
-

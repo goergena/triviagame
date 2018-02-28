@@ -4,7 +4,6 @@ $(document).ready(function () {
         timedGame.stop();
     });
 
-    // $("#start-button").click(timedGame.start);
     $("#start-button").on("click", function () {
         timedGame.start();
     });
@@ -12,23 +11,20 @@ $(document).ready(function () {
 
     var intervalId;
     var clockRunning = false;
-
-
     var timedGame = {
-
+        //sets time to 300 seconds
         time: 300,
-
+        //starts game
         start: function () {
-
-            displayThe.game();
-
+            //displays the questions 
+            displayThe.questions();
+            //starts countdown
             if (!clockRunning) {
-                intervalId = setInterval(timedGame.count, 1000);
+                intervalId = setInterval(timedGame.countdown, 1000);
                 clockRunning = true;
-                console.log(intervalId);
             }
         },
-
+        //when the game stops: (1) the timer stops, (2) results are calculated and (3) results are displayed
         stop: function () {
             clearInterval(intervalId);
             clockRunning = false;
@@ -36,25 +32,27 @@ $(document).ready(function () {
             displayThe.results();
         },
 
-        count: function () {
+        countdown: function () {
+            //decrements time down
             timedGame.time--;
+            //converts current time to minutes and displays it
             var currentTime = timedGame.timeConverter(timedGame.time);
             $("#timer").text(currentTime);
+            //countdown stops when time is out
             if (timedGame.time === 0) {
                 timedGame.stop();
             }
         },
 
         timeConverter: function (t) {
+            //it's convenient to have this function available to other timers 
 
-            //  Takes the current time in seconds and convert it to minutes and seconds (mm:ss).
             var minutes = Math.floor(t / 60);
             var seconds = t - (minutes * 60);
 
             if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-
             if (minutes === 0) {
                 minutes = "0";
             }
@@ -62,55 +60,30 @@ $(document).ready(function () {
         }
     };
 
+    var correctAnswers = 0;
+    var incorrectAnswers = 0;
+    var unanswered = 10;
     function calculateResults() {
-        var correctAnswers = 0;
-        var incorrectAnswers = 0;
-        var unanswered = 10;
-        var correct = "correct";
-       /* $("input:checked").each( function(checkedBox) {
-            unanswered--;
-            if ($(checkedBox).val() == correct) {
-                correctAnswers++;
-            } else if ($(checkedBox).val("option")) {
-                incorrectAnswers++;
-            }
 
-        }) */
-        
         correctAnswers += $("input[type=radio][value=correct]:checked").length;
         incorrectAnswers += $("input[type=radio][value=option]:checked").length;
         unanswered -= $("input[type=radio]:checked").length;
-       // if( $("input[type=radio]:checked").val()==="correct"){
-       //     correctAnswers++;
-       // }
-        if ($("#t2op1").val()==="option") {
-            console.log("this is incorrect because dear god why")
-        } else {
-            console.log("t2op1 value is option")
-        }
-        
-        console.log(correctAnswers);
-        console.log(incorrectAnswers);
-        console.log(unanswered);
-
-    }
+    };
 
     var displayThe = {
-        game: function () {
+        questions: function () {
             $("#trivia").removeClass("hidden");
             $("#start-button").addClass("hidden");
         },
         results: function () {
-            // $("#trivia").empty();
-            console.log("this is my results rn")
-            //first: calculate results
-            //store them
-            //
+             $("#trivia").empty();
+            var resultText = 
+            "<p>Correct: " + correctAnswers + "</p>" +
+            "<p>Incorrect: " + incorrectAnswers + "</p>" +
+            "<p>Unanswered: " + unanswered + "</p>";
 
+            $("#trivia").append(resultText);
         }
-
-    }
-
-
+    };
 
 });
