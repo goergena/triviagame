@@ -10,13 +10,24 @@ body {
      z-index: 99;
      border-bottom: solid 2px #fff;
      width: 100%;
-     margin-top: 0;
+     margin: 0 0 30px;
  }
+ 
  ol {
     margin-left: 10px;
     padding: 5px;
     list-style-type: decimal;
 }  
+
+h1 {
+    margin-left: 20px;
+}
+#timer {
+    margin-right: 20px;
+    vertical-align: bottom;
+    font-size: 36px;
+}
+
 
 .hidden {
     position: absolute; 
@@ -31,14 +42,14 @@ footer {
     background: #491e1d;
 
 }
+p {
+    display: block;
+}
+
 
 .main-content {
-    margin-top: 60px;
+    padding-top: 130px;
 }
 
-/*
-.intro {
- margin-top: 50px;
-}
 
 

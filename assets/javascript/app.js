@@ -63,6 +63,7 @@ $(document).ready(function () {
     var correctAnswers = 0;
     var incorrectAnswers = 0;
     var unanswered = 10;
+
     function calculateResults() {
 
         correctAnswers += $("input[type=radio][value=correct]:checked").length;
@@ -76,13 +77,13 @@ $(document).ready(function () {
             $("#start-button").addClass("hidden");
         },
         results: function () {
-             $("#trivia").empty();
-            var resultText = 
-            "<p>Correct: " + correctAnswers + "</p>" +
-            "<p>Incorrect: " + incorrectAnswers + "</p>" +
-            "<p>Unanswered: " + unanswered + "</p>";
+            $("#trivia").empty();
+            var resultText =
+                "<h2>Correct: " + correctAnswers + " </h2> " +
+                "<h2>Incorrect: " + incorrectAnswers + " </h2> " +
+                "<h2>Unanswered: " + unanswered + " </h2>";
 
-            $("#trivia").append(resultText);
+            $(".jumbotron").html(resultText);
         }
     };
 

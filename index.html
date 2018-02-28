@@ -12,278 +12,273 @@
 </head>
 
 <body>
-    <div id="masthead">
-        
-                <div class="container">
-                <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <h1>Harry Potter Trivia</h1>
-                    </div>
-                    <div class="col-md-4">
-                    <button id="start-button" class="btn btn-default">Start</button>
-                    <span id="timer">5:00</span>
-                </div>
-                </div>
-            </div>
+    <div id="masthead" class="clearfix">
+
+        <h1 class="float-left">Harry Potter Trivia</h1>
+        <span id="timer" class="float-right">5:00</span>
+
+    </div>
+    <div class="container">
+
+        <div class="main-content">
+            <div class="jumbotron text-center">
+                <h2>Welcome to Harry Potter Trivia!</h2>
+                <h3>You have five minutes to answer ten questions. Answer them all before your time runs out!</h3>
+                <button id="start-button" class="btn btn-default">Start</button>
             </div>
 
-<div class="container main-content">
-        <div class="row">
-            <h2>Welcome to Harry Potter Trivia!</h2>
-            <h3>You have five minutes to answer ten questions. Answer them all before your time runs out!</h3>
+            <div id="trivia" class="hidden row">
+                <div class="col-12">
+
+                    <ol>
+                        <li>How many bedrooms are in the Dursley's house?
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t1" id="t1op1" value="option">
+                                <label class="form-check-label" for="t1op1">
+                                    2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t1" id="t1op2" value="option">
+                                <label class="form-check-label" for="t1op2">
+                                    3
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t1" id="t1op3" value="correct">
+                                <label class="form-check-label" for="t1op3">
+                                    4
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>How much gold do Fred and George bet at the Quidditch World Cup?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t2" id="t2op1" value="option">
+                                <label class="form-check-label" for="t2op1">
+                                    33 Galleons
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t2" id="t2op2" value="option">
+                                <label class="form-check-label" for="t2op2">
+                                    35 Galleons
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t2" id="t2op3" value="correct">
+                                <label class="form-check-label" for="t2op3">
+                                    37 Galleons
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t2" id="t2op4" value="option">
+                                <label class="form-check-label" for="t2op4">
+                                    39 Galleons
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>Hermione founds an organization called the 'House Elf Liberation Front'
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t3" id="t3op1" value="option">
+                                <label class="form-check-label" for="t3op1">
+                                    True
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t3" id="t3op2" value="correct">
+                                <label class="form-check-label" for="t3op2">
+                                    False
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>Where is the Riddle House?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t4" id="t4op1" value="option">
+                                <label class="form-check-label" for="t4op1">
+                                    Little Whinging
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t4" id="t4op2" value="correct">
+                                <label class="form-check-label" for="t4op2">
+                                    Little Hangleton
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t4" id="t4op3" value="option">
+                                <label class="form-check-label" for="t4op3">
+                                    Ottery St. Catchpole
+                                </label>
+                            </div>
+                        </li>
+                        <li>Find the imposter house elf: 
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t5" id="t5op1" value="option">
+                                <label class="form-check-label" for="t5op1">
+                                    Dobby
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t5" id="t5op2" value="option">
+                                <label class="form-check-label" for="t5op2">
+                                    Winky
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t5" id="t5op3" value="correct">
+                                <label class="form-check-label" for="t5op3">
+                                    Pokey
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t5" id="t5op4" value="option">
+                                <label class="form-check-label" for="t5op4">
+                                    Hokey
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>How many challenges protect the Sorcerer's Stone? (book, not movie)
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t6" id="t6op1" value="option">
+                                <label class="form-check-label" for="t6op1">
+                                    4
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t6" id="t6op2" value="option">
+                                <label class="form-check-label" for="t6op2">
+                                    5
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t6" id="t6op3" value="option">
+                                <label class="form-check-label" for="t6op3">
+                                    6
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t6" id="t6op4" value="correct">
+                                <label class="form-check-label" for="t6op4">
+                                    7
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>Who does Ron fall for on Valentine's Day in Year 6?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t7" id="t7op1" value="option">
+                                <label class="form-check-label" for="t7op1">
+                                    Lavender Brown
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t7" id="t7op2" value="correct">
+                                <label class="form-check-label" for="t7op2">
+                                    Romilda Vane
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t7" id="t7op3" value="option">
+                                <label class="form-check-label" for="t7op3">
+                                    Cho Chang
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t7" id="t7op4" value="option">
+                                <label class="form-check-label" for="t7op4">
+                                    Hermione Granger
+                                </label>
+                            </div>
+                        </li>
+                        <li>Who sends crystalized pineappleto Professor Slughorn?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t8" id="t8op1" value="correct">
+                                <label class="form-check-label" for="t8op1">
+                                    Ambrosius Flume
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t8" id="t8op2" value="option">
+                                <label class="form-check-label" for="t8op2">
+                                    Blaise Zambini
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t8" id="t8op3" value="option">
+                                <label class="form-check-label" for="t8op3">
+                                    Gwenog Jones
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t8" id="t8op4" value="option">
+                                <label class="form-check-label" for="t8op4">
+                                    Cormac McLaggen
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>What is NOT the same as wolfsbane?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t9" id="t9op1" value="correct">
+                                <label class="form-check-label" for="t9op1">
+                                    Bezoar
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t9" id="t9op2" value="option">
+                                <label class="form-check-label" for="t9op2">
+                                    Alconite
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t9" id="t9op3" value="option">
+                                <label class="form-check-label" for="t9op3">
+                                    Monkshood
+                                </label>
+                            </div>
+                        </li>
+
+                        <li>What is NOT a statue in Hogwarts?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t10" id="t10op1" value="correct">
+                                <label class="form-check-label" for="t10op1">
+                                    Urg the Unclean
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t10" id="t10op2" value="option">
+                                <label class="form-check-label" for="t10op2">
+                                    Boris the Bewildered
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t10" id="t10op3" value="option">
+                                <label class="form-check-label" for="t10op3">
+                                    Gregory the Smarmy
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="t10" id="t10op4" value="option">
+                                <label class="form-check-label" for="t10op4">
+                                    Gunhilda de Gorsemoor
+                                </label>
+                            </div>
+                        </li>
+                    </ol>
+                    <button id="submit-button" class="btn btn-danger">Submit</button>
+                </div>
+            </div>
+
+            <div class="row hidden" id="results">
+
+            </div>
+
         </div>
-        <div id="trivia" class="hidden row">
-
-            <ol>
-                <li>How many bedrooms are in the Dursley's house?
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t1" id="t1op1" value="option">
-                        <label class="form-check-label" for="t1op1">
-                            2
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t1" id="t1op2" value="option">
-                        <label class="form-check-label" for="t1op2">
-                            3
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t1" id="t1op3" value="correct">
-                        <label class="form-check-label" for="t1op3">
-                            4
-                        </label>
-                    </div>
-                </li>
-
-                <li>How much do Fred and George bet on Ireland winning, but Bulgaria getting the snitch at the Quidditch World
-                    Cup?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t2" id="t2op1" value="option">
-                        <label class="form-check-label" for="t2op1">
-                            33 Galleons
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t2" id="t2op2" value="option">
-                        <label class="form-check-label" for="t2op2">
-                            35 Galleons
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t2" id="t2op3" value="correct">
-                        <label class="form-check-label" for="t2op3">
-                            37 Galleons
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t2" id="t2op4" value="option">
-                        <label class="form-check-label" for="t2op4">
-                            39 Galleons
-                        </label>
-                    </div>
-                </li>
-
-                <li>Hermione founds an organization called the 'House Elf Liberation Front'
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t3" id="t3op1" value="option">
-                        <label class="form-check-label" for="t3op1">
-                            True
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t3" id="t3op2" value="correct">
-                        <label class="form-check-label" for="t3op2">
-                            False
-                        </label>
-                    </div>
-                </li>
-
-                <li>Where is the Riddle House?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t4" id="t4op1" value="option">
-                        <label class="form-check-label" for="t4op1">
-                            Little Whinging
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t4" id="t4op2" value="correct">
-                        <label class="form-check-label" for="t4op2">
-                            Little Hangleton
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t4" id="t4op3" value="option">
-                        <label class="form-check-label" for="t4op3">
-                            Ottery St. Catchpole
-                        </label>
-                    </div>
-                </li>
-                <li>Who is not a house elf?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t5" id="t5op1" value="option">
-                        <label class="form-check-label" for="t5op1">
-                            Dobby
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t5" id="t5op2" value="option">
-                        <label class="form-check-label" for="t5op2">
-                            Winky
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t5" id="t5op3" value="correct">
-                        <label class="form-check-label" for="t5op3">
-                            Pokey
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t5" id="t5op4" value="option">
-                        <label class="form-check-label" for="t5op4">
-                            Hokey
-                        </label>
-                    </div>
-                </li>
-
-                <li>How many challenges protect the Sorcerer's Stone? (book, not movie)
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t6" id="t6op1" value="option">
-                        <label class="form-check-label" for="t6op1">
-                            4
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t6" id="t6op2" value="option">
-                        <label class="form-check-label" for="t6op2">
-                            5
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t6" id="t6op3" value="option">
-                        <label class="form-check-label" for="t6op3">
-                            6
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t6" id="t6op4" value="correct">
-                        <label class="form-check-label" for="t6op4">
-                            7
-                        </label>
-                    </div>
-                </li>
-
-                <li>Who does Ron fall for on Valentine's Day in Year 6?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t7" id="t7op1" value="option">
-                        <label class="form-check-label" for="t7op1">
-                            Lavender Brown
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t7" id="t7op2" value="correct">
-                        <label class="form-check-label" for="t7op2">
-                            Romilda Vane
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t7" id="t7op3" value="option">
-                        <label class="form-check-label" for="t7op3">
-                            Cho Chang
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t7" id="t7op4" value="option">
-                        <label class="form-check-label" for="t7op4">
-                            Hermione Granger
-                        </label>
-                    </div>
-                </li>
-                <li>Who gives Horace Slughorn crystalized pineapple?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t8" id="t8op1" value="correct">
-                        <label class="form-check-label" for="t8op1">
-                            Ambrosius Flume
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t8" id="t8op2" value="option">
-                        <label class="form-check-label" for="t8op2">
-                            Blaise Zambini
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t8" id="t8op3" value="option">
-                        <label class="form-check-label" for="t8op3">
-                            Gwenog Jones
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t8" id="t8op4" value="option">
-                        <label class="form-check-label" for="t8op4">
-                            Cormac McLaggen
-                        </label>
-                    </div>
-                </li>
-
-                <li>What is NOT the same as wolfsbane?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t9" id="t9op1" value="correct">
-                        <label class="form-check-label" for="t9op1">
-                            Bezoar
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t9" id="t9op2" value="option">
-                        <label class="form-check-label" for="t9op2">
-                            Alconite
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t9" id="t9op3" value="option">
-                        <label class="form-check-label" for="t9op3">
-                            Monkshood
-                        </label>
-                    </div>
-                </li>
-
-                <li>What is NOT a statue in Hogwarts?
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t10" id="t10op1" value="correct">
-                        <label class="form-check-label" for="t10op1">
-                            Urg the Unclean
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t10" id="t10op2" value="option">
-                        <label class="form-check-label" for="t10op2">
-                            Boris the Bewildered
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t10" id="t10op3" value="option">
-                        <label class="form-check-label" for="t10op3">
-                            Gregory the Smarmy
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="t10" id="t10op4" value="option">
-                        <label class="form-check-label" for="t10op4">
-                            Gunhilda de Gorsemoor
-                        </label>
-                    </div>
-                </li>
-            </ol>
-            <button id="submit-button" class="btn btn-danger">Submit</button>
-            </div>
-
-            <div class="row">
-                    <footer>
-
-                        </footer>   
- </div>
-
     </div>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
